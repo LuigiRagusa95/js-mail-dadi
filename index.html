@@ -6,6 +6,90 @@
         <script src="./js/main.js"></script>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            *,
+            *::before,
+            *::after {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            html,
+            body {
+                width: 100%;
+                height: 100%;
+                font-family: sans-serif;
+            }
+
+            .section {
+                padding: 1rem;
+                display: flex;
+                color: #21262e;
+                flex-direction: column;
+            }
+
+            .section h1 {
+                font-size: 1.5rem;
+                line-height: 2rem;
+            }
+
+            .section label {
+                line-height: 1.5rem;
+            }
+
+            .section label > input {
+                line-height: 1.5rem;
+                padding-left: 0.25rem;
+                padding-right: 0.25rem;
+            }
+
+            input {
+                border: 0;
+                border-radius: 0.125rem;
+                border: 2px solid #909dab;
+            }
+
+            input:focus {
+                outline: 2px solid #6b44bc;
+                border-color: #dcbdfb;
+            }
+
+            .section > * {
+                margin: 0.25rem;
+            }
+
+            button {
+                border: none;
+                outline: none;
+                appearance: none;
+            }
+
+            .button {
+                display: flex;
+                cursor: pointer;
+                color: #fafafa;
+                width: max-content;
+                padding: 0.5rem 1rem;
+                border-radius: 0.125rem;
+                letter-spacing: 0.025rem;
+                background-color: #2d333b;
+            }
+
+            .button:hover {
+                background-color: #8256d0;
+                transition: 0.1s ease;
+            }
+        </style>
     </head>
-    <body></body>
+    <body>
+        <section class="section">
+            <h1>Email Validator</h1>
+            <label for="input-mail">
+                Enter your email:&ThinSpace;
+                <input type="text" name="mail-field" id="input-mail" autocomplete="off" />
+            </label>
+            <button class="button">Validate</button>
+        </section>
+    </body>
 </html>
