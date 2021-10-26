@@ -6,16 +6,18 @@ const listEmails = ['mozilla@gmail.com', 'stackoverflow@gmail.com', 'paypal@outl
 buttonValidate.addEventListener('click', () => {
     if (!isNaN(mailInput.value)) alert('Not allowed input! Please try again...');
     else {
+        let flag = false;
         for (let i = 0; i < listEmails.length; i++) {
-            const mail = listEmails[i];
-            if (mail === mailInput.value) {
-                alert(`Great 🎉! Now you are in! Welcome back ${mail}!`);
+            if (mailInput.value === listEmails[i]) {
+                flag = true;
                 break;
-            } else {
-                alert('MMMh 🤔! Something was wrong...Please try again ');
-                mailInput.value = '';
-                break;
-            }
+            } else flag = false;
+        }
+
+        if (flag) {
+            alert(`Great 🎉! Now you are in! Welcome back!`);
+        } else {
+            alert('MMMh 🤔! Something was wrong...Please try again ');
         }
     }
 });
