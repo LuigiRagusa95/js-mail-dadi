@@ -2,10 +2,10 @@
 
 ## Mail
 
-1.crea una lista contenente almeno 3 indirizzi email
-2.chiedi all’utente la sua email,
-3.controlla che sia nella lista di chi può accedere (lista creata sopra al punto 1),
-4.stampa un messaggio appropriato sull’esito del controllo.
+1. crea una lista contenente almeno 3 indirizzi email
+2. chiedi all’utente la sua email,
+3. controlla che sia nella lista di chi può accedere (lista creata sopra al punto 1),
+4. stampa un messaggio appropriato sull’esito del controllo.
 
 ## Gioco dei dadi
 
