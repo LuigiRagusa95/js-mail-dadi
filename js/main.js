@@ -43,5 +43,5 @@ rollBtn.addEventListener('click', () => {
 restartBtn.addEventListener('click', () => {
     textUser.innerHTML = `You -`;
     textPc.innerHTML = `AI -`;
-    textResult.innerHTML = `Result -`;
+    textResult.innerHTML = `- Result -`;
 });
