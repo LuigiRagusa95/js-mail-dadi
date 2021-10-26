@@ -34,19 +34,28 @@ const textUser = document.getElementById('text-user');
 const textPc = document.getElementById('text-pc');
 const textResult = document.getElementById('text-result');
 
+let matchesCount = 0;
+
 rollBtn.addEventListener('click', () => {
-    const userRoll = Math.floor(Math.random() * 6) + 1;
-    const PcRoll = Math.floor(Math.random() * 6) + 1;
+    if (matchesCount <= 10) {
+        const userRoll = Math.floor(Math.random() * 6) + 1;
+        const PcRoll = Math.floor(Math.random() * 6) + 1;
 
-    textUser.innerHTML += ` <span>${userRoll}</span>`;
-    textPc.innerHTML += ` <span>${PcRoll}</span>`;
+        textUser.innerHTML += ` <span>${userRoll}</span>`;
+        textPc.innerHTML += ` <span>${PcRoll}</span>`;
 
-    if (userRoll > PcRoll) textResult.innerHTML = 'Yeah... You win 🎉';
-    else if (userRoll === PcRoll) textResult.innerHTML = 'Mhh... It is a draw 😐';
-    else textResult.innerHTML = 'Oh no... Ai always wins 🤖';
+        if (userRoll > PcRoll) textResult.innerHTML = 'Yeah... You win 🎉';
+        else if (userRoll === PcRoll) textResult.innerHTML = 'Mhh... It is a draw 😐';
+        else textResult.innerHTML = 'Oh no... Ai always wins 🤖';
+
+        ++matchesCount;
+    } else {
+        alert('Too much matches! Please reset the Bot 🤖! ');
+    }
 });
 
 restartBtn.addEventListener('click', () => {
+    matchesCount = 0;
     textUser.innerHTML = `You -`;
     textPc.innerHTML = `AI -`;
     textResult.innerHTML = `- Result -`;
