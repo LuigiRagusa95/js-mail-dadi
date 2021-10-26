@@ -6,17 +6,21 @@ const listEmails = ['mozilla@gmail.com', 'stackoverflow@gmail.com', 'paypal@outl
 buttonValidate.addEventListener('click', () => {
     if (!isNaN(mailInput.value)) alert('Not allowed input! Please try again...');
     else {
+        let user = '';
         let flag = false;
         for (let i = 0; i < listEmails.length; i++) {
             if (mailInput.value === listEmails[i]) {
                 flag = true;
+                user = listEmails[i];
+                mailInput.value = '';
                 break;
-            } else flag = false;
+            }
         }
 
         if (flag) {
-            alert(`Great 🎉! Now you are in! Welcome back!`);
+            alert(`Great 🎉! Now you are in! Welcome back ${user}!`);
         } else {
+            mailInput.value = '';
             alert('MMMh 🤔! Something was wrong...Please try again ');
         }
     }
